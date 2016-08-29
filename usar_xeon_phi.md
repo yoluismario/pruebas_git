@@ -25,8 +25,11 @@ icc -openmp -mmic -o pmergintel pmerge.c
 recursos de [intel]
 [intel]:https://software.intel.com/en-us/mic-developer/tools-and-downloads
 
-
-
-
-
-
+# compilar programas en pulqui
+```sh
+$ wget -c ftp://ftp.gnu.org/gnu/octave/octave-4.0.0.tar.gz
+$ tar -xvf octave-4.0.0.tar.gz
+$ cd octave-4.0.0/
+$ ./configure --prefix=/opt/octave-4.0.0 CPPFLAGS=-I/usr/include/hdf5/serial LDFLAGS=-L/usr/lib/$(dpkg-architecture -qDEB_HOST_MULTIARCH)/hdf5/serial
+make
+```

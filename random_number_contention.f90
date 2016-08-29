@@ -1,5 +1,6 @@
 program main
 
+! ifort -o3 -openmp random_number_contention.f90
 !*****************************************************************************80
 !
 !! RANDOM_NUMBER_CONTENTION demonstrates a memory contention problem.
@@ -78,7 +79,8 @@ program main
   
   thread_max = proc_num
   if ( 8 < thread_max ) then
-    thread_max = 8
+    thread_max = 12 
+!   thread_max = 8
   end if
 
   write ( *, '(a)' ) ' '

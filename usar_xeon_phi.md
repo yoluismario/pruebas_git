@@ -17,9 +17,16 @@ Es como miccheck pero a nivel de usuario.
 ```sh
 $ micinfo -listDevices
 ```
+## compilar para phi
+icc -openmp -mmic -o pmergintel pmerge.c 
+
 
 ## recursos
 recursos de [intel]
 [intel]:https://software.intel.com/en-us/mic-developer/tools-and-downloads
+
+
+
+
 
 

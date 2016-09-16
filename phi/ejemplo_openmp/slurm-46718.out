@@ -1,0 +1,40 @@
+16 September 2016  11:40:23.325 AM
+ 
+RANDOM_NUMBER_CONTENTION
+  FORTRAN90 version
+ 
+  This program demonstrates a case where the use
+  of multiple threads in OpenMP may DEGRADE the
+  performance of a program.
+ 
+  In this program, we simply call the FORTRAN90
+  random number generator many times.
+ 
+  Because that function has internal saved variables,
+  when it is accessed by multile threads, there can
+  be huge delays because the threads fight to gain
+  access to the saved variables.
+ 
+  The number of processors available:
+  OMP_GET_NUM_PROCS () =      228
+ 
+   Threads    Wallclock time
+              (seconds)
+ 
+         1    0.137410    
+         2    0.341533    
+         3    0.319216    
+         4    0.287826    
+         5    0.302733    
+         6    0.303763    
+         7    0.307212    
+         8    0.308889    
+         9    0.306054    
+        10    0.307321    
+        11    0.305560    
+        12    0.306358    
+ 
+RANDOM_NUMBER_CONTENTION
+  Normal end of execution.
+ 
+16 September 2016  11:40:26.896 AM

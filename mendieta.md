@@ -9,3 +9,5 @@ Me sorprendió la verdad ya que compiló cero inconveniente y corrió bien.
 
 Código muy CPU bound, no demasiada RAM: fáciles de usar porque el OpenMP es infinitamente más fácil que CUDA. 
 
+# buscar un código pra compilar
+# probar 

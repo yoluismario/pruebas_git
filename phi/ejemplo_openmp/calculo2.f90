@@ -1,4 +1,6 @@
 Program calculo
+	
+	
 	implicit none
 	use omp_lib
 	

@@ -1,22 +1,24 @@
 Program calculo
 	
-	
+	use omp_lib	
 	implicit none
-	use omp_lib
-	
+	! Definiciones
 	INTEGER :: i,j,k,l
 	INTEGER :: gldn, nod, nel,nnod 
-	DOUBLE PRECISION :: E, theta, alfa
+	DOUBLE PRECISION :: E, theta, alfa, wtime
 	! Alocables 
-	DOUBLE PRECISION, ALLOCATABLE, DIMENSION (:,:) :: K, M
+	DOUBLE PRECISION, ALLOCATABLE, DIMENSION (:,:) :: Ke, M
 	
 	gldn = 2
 	
 	call timestamp ( )
 	
 	nel = 100
+	allocate(Ke(nel,nel))
+	allocate(M(nel,nel))
 	
 	
+	matmul(Ke,M)
 	
 	
 	

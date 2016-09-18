@@ -17,10 +17,12 @@ Program calculo
 	allocate(Ke(nel,nel))
 	allocate(M(nel,nel))
 	
+	call RANDOM_NUMBER(Ke)
+	call RANDOM_NUMBER(M)
 	
 	matmul(Ke,M)
 	
-	call RANDOM_NUMBER(Ke)
+	
 	
 	call timestamp ( )	
 	
